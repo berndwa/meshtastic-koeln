@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="304" viewBox="0 0 560 304" fill="none">
+  <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="14" cy="14" r=".8" fill="#86a58b" opacity=".25"/></pattern></defs>
+  <path fill="url(#grid)" d="M0 0h560v304H0z"/>
+  <g stroke="#819880" opacity=".25"><circle cx="294" cy="160" r="54"/><circle cx="294" cy="160" r="108"/><circle cx="294" cy="160" r="162"/></g>
+  <path d="M411-10c-72 50-87 75-58 110s93 47 63 87-73 49-57 127" stroke="#759c89" stroke-width="31" opacity=".17"/>
+  <path d="M411-10c-72 50-87 75-58 110s93 47 63 87-73 49-57 127" stroke="#8eae98" stroke-width="1.2" stroke-dasharray="4 6" opacity=".6"/>
+  <g stroke="#a8cd8c" stroke-width="1.2"><path d="m103 174 94-84 97 70 135-86M103 174l191-14 148 67M197 90l-21 152 118-82" opacity=".65"/><path d="m103 174 73 68 266-15M197 90l232-16 13 153" stroke-dasharray="4 6" opacity=".35"/></g>
+  <g fill="#182a24" stroke="#b8de96" stroke-width="1.5"><circle cx="103" cy="174" r="5"/><circle cx="197" cy="90" r="5"/><circle cx="429" cy="74" r="5"/><circle cx="442" cy="227" r="5"/><circle cx="176" cy="242" r="5"/></g>
+  <circle cx="294" cy="160" r="12" fill="#cbf778" fill-opacity=".12"/><circle cx="294" cy="160" r="4" fill="#cbf778"/>
+  <g stroke="#dce9cc" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M216 207h99M226 207v-61h15v61m-15-61 7.5-55 7.5 55m-11-28h7m14 89v-61h15v61m-15-61 7.5-55 7.5 55m-11-28h7m-20 66 8-12 8 12m-16 23v-15h16v15m8-36h20l20 17v19m-40-25h26m-18 25v-16m10 16v-12M230 153h7m18 0h7m-32 9h7m18 0h7m-32 9h7m18 0h7"/></g>
+  <g font-family="Arial,sans-serif" font-size="9" letter-spacing="1.2" fill="#c9d9c3"><text x="300" y="146">KÖLN</text><text x="82" y="196" opacity=".7">UMGEBUNG</text><text x="442" y="59" opacity=".7">UMGEBUNG</text><text x="394" y="150" font-size="8" fill="#a6bbaa" transform="rotate(37 394 150)">RHEIN</text></g>
+</svg>

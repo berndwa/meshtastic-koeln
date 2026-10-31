@@ -1,0 +1,16 @@
+{
+  "name": "Koeln",
+  "invite_url": "https://meshtastic.org/e/?add=true#CjASIEzZycQ67AIFUEMnEBDqMMMbmItKKdJBLb--t3giEgafGgVLb2VsbiUCAAAAOgA",
+  "public_psk_base64": "TNnJxDrsAgVQQycQEOowwxuYi0op0kEtv763eCISBp8=",
+  "intended_configuration": {
+    "region": "EU_868",
+    "use_preset": true,
+    "modem_preset": "SHORT_SLOW",
+    "channel_role": "SECONDARY",
+    "mqtt_enabled": false,
+    "uplink_enabled": false,
+    "downlink_enabled": false
+  },
+  "payload_contains_lora_config": false,
+  "note": "Referenzdaten, keine universelle Meshtastic-Importdatei. Rolle, LoRa und globales MQTT am Gerät prüfen. Der Schlüssel ist absichtlich öffentlich."
+}

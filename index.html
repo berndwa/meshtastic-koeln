@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Koeln: ein öffentlicher Meshtastic-Channel für Köln und Umgebung. Einladung, QR-Code und Anleitung für EU_868 und Short Slow.">
+  <meta name="referrer" content="no-referrer">
+  <title>Koeln · Zusammen auf einer Wellenlänge</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt</a>
+  <header class="site-header wrap">
+    <a href="#" class="brand" aria-label="Koeln Mesh – Startseite">
+      <svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><path d="m9 27 11-17 11 17M9 27h22" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="10" r="4"/><circle cx="9" cy="27" r="4"/><circle cx="31" cy="27" r="4"/></svg>
+      <span>koeln<span class="brand-sub">MESHTASTIC CHANNEL</span></span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#konfiguration">Konfiguration</a>
+      <a href="#beitreten">Beitreten <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="inhalt">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> KÖLN & UMGEBUNG</p>
+        <h1 id="hero-title">Zusammen auf<br>einer <span>Wellenlänge.</span></h1>
+        <p class="hero-description">Ein öffentlicher Meshtastic-Channel für Nachrichten über Funk. Für Neugierige, Nachbarn und alle, die in Köln mitmeshen möchten.</p>
+        <a class="button button-dark" href="https://meshtastic.org/e/?add=true#CjASIEzZycQ67AIFUEMnEBDqMMMbmItKKdJBLb--t3giEgafGgVLb2VsbiUCAAAAOgA" data-invite>Channel hinzufügen <span aria-hidden="true">↗</span></a>
+        <a class="text-link hero-help" href="#beitreten">Zum ersten Mal dabei? So geht’s <span aria-hidden="true">↓</span></a>
+        <p class="hero-note">Du brauchst ein Meshtastic-Funkgerät für 868 MHz.<br>Ein Smartphone allein kann hier nicht mitfunken.</p>
+      </div>
+
+      <div class="channel-card">
+        <div class="card-heading"><span><span class="dot"></span> OFFEN ZUM MITMACHEN</span><span class="card-index">CH / KOELN</span></div>
+        <div class="mesh-art">
+          <img src="assets/koeln-mesh.svg" width="560" height="304" alt="Illustration des Kölner Doms am Rhein mit verbundenen Funkknoten. Keine Abdeckungskarte.">
+          <span class="art-caption">AM RHEIN. ÜBER FUNK.</span>
+        </div>
+        <div class="card-join">
+          <a class="qr-link" href="assets/koeln-qr.png" aria-label="QR-Code für die Koeln-Einladung als Bild öffnen"><img src="assets/koeln-qr.svg" width="148" height="148" alt="QR-Code mit dem Einladungslink zum Meshtastic-Channel Koeln"></a>
+          <div><h2>Scan. Join. Hallo.</h2><p>Auf dem Handy den Button nutzen. An einem anderen Bildschirm den QR-Code scannen.</p><a class="text-link" href="assets/koeln-qr.png" download="koeln-qr.png">QR-Code herunterladen <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <div class="card-bottom"><span>EU_868</span><span>SHORT_SLOW</span><span>MQTT AUS</span></div>
+      </div>
+    </section>
+
+    <div class="intro-strip wrap"><span class="small-label">DIE IDEE</span><p>Lokal funken. Wissen teilen. <strong>Einfach mal „Hallo Köln“ sagen.</strong></p><span class="strip-symbol" aria-hidden="true">↗</span></div>
+
+    <section class="section wrap" id="konfiguration" aria-labelledby="config-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / RICHTIG EINSTELLEN</p><h2 id="config-title">Ein Channel.<br>Klare Einstellungen.</h2></div><p>Der Link fügt den Channel hinzu. Die Funkparameter prüfst du separat auf deinem Gerät.</p></div>
+      <div class="config-layout">
+        <dl class="config-list">
+          <div><dt>Channelname</dt><dd><code>Koeln</code><span>Genau so schreiben, ohne Umlaut.</span></dd></div>
+          <div><dt>Funkregion</dt><dd><code>EU_868</code><span>Für das Funkgerät in Deutschland.</span></dd></div>
+          <div><dt>Modem-Preset</dt><dd><code>SHORT_SLOW</code><span>In der App auch „Short Slow“.</span></dd></div>
+          <div><dt>Channelrolle</dt><dd><code>SECONDARY</code><span>Als zusätzlichen Channel anlegen.</span></dd></div>
+          <div><dt>Verschlüsselung</dt><dd>AES-256 · öffentlicher Schlüssel<span>32 Byte; im Link und QR-Code enthalten.</span></dd></div>
+          <div><dt>MQTT</dt><dd>Aus<span>Modul sowie Channel-Uplink und -Downlink ausschalten.</span></dd></div>
+        </dl>
+        <aside class="config-aside">
+          <span class="aside-icon" aria-hidden="true">↔</span>
+          <h3>Short Slow gilt<br>für das ganze Gerät.</h3>
+          <p>Secondary ist eine zusätzliche Nachrichtengruppe, kein zweites Funkprofil. Alle Channels desselben Funkgeräts teilen sich die LoRa-Einstellungen.</p>
+          <p>Mit <strong>SHORT_SLOW</strong> erreichst du keine Geräte, die auf <strong>LONG_FAST</strong> funken – auch wenn ein Channel „LongFast“ heißt.</p>
+          <p class="technical-line">Short Slow: 250 kHz · SF8 · CR 4/5</p>
+          <a class="text-link" href="https://meshtastic.org/docs/overview/radio-settings/">Meshtastic-Funkparameter <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+      <div class="notice"><span class="notice-label">WICHTIG ZUM IMPORT</span><p>Diese Einladung enthält <strong>keine LoRa-Konfiguration und keine fest gespeicherte Channelrolle</strong>. <strong>„Hinzufügen / Add“</strong> wählen und anschließend <strong>Secondary</strong> prüfen. Region, Preset und das globale MQTT-Modul werden durch diesen Link nicht eingestellt.</p></div>
+      <details class="manual-config"><summary>Manuell einrichten & vollständigen Einladungslink anzeigen</summary><div class="details-body">
+        <p>In einem freien zusätzlichen Channel <strong>Koeln</strong> und <strong>Secondary</strong> wählen. Diesen öffentlich geteilten Schlüssel im <strong>Base64-Feld</strong> einfügen; keinen neuen Schlüssel erzeugen:</p>
+        <label for="public-key">Öffentlicher AES-256-Schlüssel (Base64)</label>
+        <div class="copy-row"><input id="public-key" value="TNnJxDrsAgVQQycQEOowwxuYi0op0kEtv763eCISBp8=" readonly spellcheck="false"><button type="button" class="button button-outline" data-copy="public-key">Schlüssel kopieren</button></div>
+        <p>Channel-Uplink und -Downlink ausschalten. Separat unter LoRa <strong>EU_868</strong>, <strong>Use preset / Preset verwenden</strong> und <strong>Short Slow</strong> setzen. Ohne Frequenzüberschreibung ergibt EU_868 mit diesem 250-kHz-Preset einen Funkfrequenzslot: <strong>Slot 1, 869,525 MHz</strong>. Slot 0 bedeutet automatische Auswahl. Funkfrequenzslot und zusätzlicher Channelplatz sind verschiedene Dinge.</p>
+        <label for="invite-url">Vollständiger Einladungslink</label>
+        <div class="copy-row"><input id="invite-url" value="https://meshtastic.org/e/?add=true#CjASIEzZycQ67AIFUEMnEBDqMMMbmItKKdJBLb--t3giEgafGgVLb2VsbiUCAAAAOgA" readonly spellcheck="false"><button type="button" class="button button-outline" data-copy="invite-url">Link kopieren</button></div>
+        <p><a class="text-link" href="config/channel.json" download>Konfiguration als JSON herunterladen <span aria-hidden="true">↓</span></a> <span class="muted">· Als Referenz, keine universelle Importdatei.</span></p>
+      </div></details>
+    </section>
+
+    <section class="join-section" id="beitreten" aria-labelledby="join-title"><div class="wrap section">
+      <div class="section-heading"><div><p class="eyebrow">02 / MITMACHEN</p><h2 id="join-title">Dein erster Funkkontakt.</h2></div><p>Funkgerät einschalten, App verbinden und die Konfiguration vollständig laden lassen. Dann kann’s losgehen.</p></div>
+      <div class="join-grid">
+        <article class="join-guide"><p class="platform-label">IPHONE / IPAD</p><h3>In der Meshtastic-App</h3><ol class="steps">
+          <li><div><h4>App & Gerät verbinden</h4><p>Die <a href="https://meshtastic.org/downloads/">Meshtastic-App</a> installieren und dein 868-MHz-Funkgerät in der App per Bluetooth verbinden.</p></div></li>
+          <li><div><h4>Einladung öffnen</h4><p>Auf diesem iPhone „Channel hinzufügen“ antippen. Oder den QR-Code von einem anderen Bildschirm scannen und mit Meshtastic öffnen.</p></div></li>
+          <li><div><h4>Hinzufügen statt ersetzen</h4><p>Im Importdialog <strong>„Add Channels / Hinzufügen“</strong> wählen. Bestehende Channels nicht ersetzen. Danach unter Channels „Koeln“ als <strong>Secondary</strong> prüfen.</p></div></li>
+          <li><div><h4>Funk prüfen & Hallo sagen</h4><p>In den Geräteeinstellungen unter LoRa <strong>EU_868</strong> und <strong>Short Slow</strong> setzen. MQTT-Modul und Channel-Uplink/-Downlink ausschalten. Speichern, bei Bedarf neu verbinden und im Chat „Koeln“ eine kurze Nachricht senden.</p></div></li>
+        </ol></article>
+        <article class="join-guide"><p class="platform-label">ANDROID / WEB / ANDERE CLIENTS</p><h3>Gleicher Channel, anderer Weg</h3><ol class="steps">
+          <li><div><h4>Client mit dem Funkgerät verbinden</h4><p>Meshtastic für Android oder einen passenden Client nutzen. Der <a href="https://client.meshtastic.org/">Web-Client</a> braucht einen unterstützten Browser und eine passende Verbindung zum Gerät, etwa USB.</p></div></li>
+          <li><div><h4>Link oder QR-Code importieren</h4><p>Die Einladung öffnen oder die QR-/Channel-Importfunktion des Clients verwenden. Die Bezeichnungen unterscheiden sich je nach Version.</p></div></li>
+          <li><div><h4>Als Secondary ergänzen</h4><p><strong>Hinzufügen / Add</strong> wählen und „Koeln“ als zusätzlichen Channel prüfen. Gibt es keinen passenden Import, Name und Schlüssel aus der manuellen Konfiguration oben übernehmen.</p></div></li>
+          <li><div><h4>Einstellungen abgleichen</h4><p>Für das Gerät <strong>EU_868</strong> und <strong>SHORT_SLOW</strong> prüfen, MQTT-Modul sowie Channel-Uplink/-Downlink ausschalten. Speichern und im Channel „Koeln“ testen.</p></div></li>
+        </ol></article>
+      </div>
+      <p class="join-footnote">Öffnet sich auf dem iPhone nur eine Webseite? Den QR-Code über die Scan-Funktion der Meshtastic-App lesen oder den Channel manuell anlegen. Für den QR-Code auf demselben Handy das Bild herunterladen; Bildimport wird nicht von jeder App-Version unterstützt.</p>
+    </div></section>
+
+    <section class="section wrap privacy-section" id="privatsphaere" aria-labelledby="privacy-title">
+      <div class="privacy-intro"><p class="eyebrow">03 / OFFEN HEISST OFFEN</p><h2 id="privacy-title">Alle sind willkommen.<br>Alle können mitlesen.</h2><p>Der Schlüssel wird bewusst öffentlich geteilt. AES-256 verschlüsselt den Funkverkehr, macht diesen Channel aber <strong>nicht vertraulich</strong>.</p><span class="public-tag"><span class="dot"></span> ÖFFENTLICHER SCHLÜSSEL ≠ PRIVATER CHAT</span></div>
+      <div class="privacy-points">
+        <div><span aria-hidden="true">01</span><div><h3>Teile, was öffentlich sein darf.</h3><p>Wer die Einladung kennt und passende Funkpakete empfängt, kann Channel-Nachrichten entschlüsseln und selbst mitsenden. Ein Schloss-Symbol in der App bedeutet hier keine geschlossene Gruppe.</p></div></div>
+        <div><span aria-hidden="true">02</span><div><h3>Behalte deinen Standort im Blick.</h3><p>Keine Adressen, sensiblen Daten oder vertraulichen Inhalte posten. Prüfe die Positionsfreigabe und Telemetrie auf deinem Gerät sowie in allen Channels. „Secondary“ ist keine Privatsphäre-Garantie.</p></div></div>
+        <div><span aria-hidden="true">03</span><div><h3>MQTT aus ist keine Weitergabesperre.</h3><p>Dein Gerät soll diesen Channel nicht ins Internet überbrücken. Andere Teilnehmende können Nachrichten trotzdem speichern, weitergeben oder über eigene Gateways veröffentlichen.</p></div></div>
+      </div>
+    </section>
+
+    <section class="faq-section wrap" aria-labelledby="faq-title"><div><p class="eyebrow">NOCH EINE FRAGE?</p><h2 id="faq-title">Gut zu wissen.</h2></div><div class="faq-list">
+      <details><summary>Ist das der offizielle Kölner Meshtastic-Channel?</summary><div class="details-body"><p>Diese Seite ist eine unabhängige Einladung zum Channel „Koeln“. Sie beansprucht keine offizielle Zugehörigkeit zu Meshtastic, zur Stadt Köln oder zu einer bestehenden lokalen Community. Die Wahl von Short Slow ist eine Vorgabe für diesen Channel, keine Aussage über das in Köln übliche Preset.</p></div></details>
+      <details><summary>Warum sehe ich nach dem Beitritt keine Nachrichten?</summary><div class="details-body"><p>Der Link ist kein zentraler Chatserver und lädt keinen bisherigen Verlauf. Du brauchst erreichbare Funkpartner mit gleichem Preset, passender Frequenz sowie identischem Channelnamen und Schlüssel. Standort, Antenne, Bebauung und aktive Geräte bestimmen die Verbindung. Eine Abdeckung oder Antwort wird nicht zugesichert; die Grafik oben ist nur eine Illustration.</p></div></details>
+      <details><summary>Kann ich LongFast parallel weiternutzen?</summary><div class="details-body"><p>Ein einzelnes übliches Meshtastic-Funkgerät verwendet für alle Channels ein gemeinsames Funkprofil. Es kann nicht gleichzeitig mit Long-Fast- und Short-Slow-Geräten kommunizieren. Für parallele Teilnahme an beiden Funkprofilen brauchst du getrennte Funkgeräte. Der Name eines Channels ändert daran nichts.</p></div></details>
+      <details><summary>Brauche ich Internet? Was lädt diese Seite nach?</summary><div class="details-body"><p>Für die lokalen LoRa-Nachrichten brauchst du nach der Einrichtung kein Internet. Zum Laden dieser Seite, zum Installieren der App und zum Öffnen externer Links schon. Die Seite selbst bindet keine Analysewerkzeuge, externen Schriften oder QR-Dienste ein. Beim Hosting verarbeitet GitHub Pages technische Verbindungsdaten; beim Öffnen externer Links gelten die Angaben des jeweiligen Anbieters.</p></div></details>
+    </div></section>
+
+    <section class="closing wrap"><div><p class="eyebrow">BIS GLEICH IM MESH.</p><h2>Köln, wir hören uns.</h2></div><a class="button button-dark" href="https://meshtastic.org/e/?add=true#CjASIEzZycQ67AIFUEMnEBDqMMMbmItKKdJBLb--t3giEgafGgVLb2VsbiUCAAAAOgA" data-invite>Channel hinzufügen <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer wrap"><div><a href="#" class="footer-brand">koeln<span aria-hidden="true">↗</span></a><p>Ein öffentlicher Channel. Eine unabhängige Einladung.</p></div><div class="footer-sources"><span>Technische Quellen · geprüft am 31.10.2026</span><a href="https://meshtastic.org/docs/configuration/radio/channels/">Channels</a><a href="https://meshtastic.org/docs/configuration/radio/lora/">LoRa</a><a href="https://meshtastic.org/docs/configuration/module/mqtt/">MQTT</a><a href="https://meshtastic.org/docs/software/apple/user/messages/">Apple-App</a><a href="docs/technical-notes.md">Prüfnotizen</a></div></footer>
+  <p class="copy-status" role="status" aria-live="polite" id="copy-status"></p>
+</body>
+</html>
